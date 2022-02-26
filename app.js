@@ -1,5 +1,5 @@
 const express= require('express');
-// const nodemailer= require('nodemailer');
+const nodemailer= require('nodemailer');
 // const { google} =require('googleapi');
 
 // const CLIENT_ID = '135106361763-tvdu3746d328ri07plfaidvohesberg9.apps.googleusercontent.com'
@@ -12,7 +12,7 @@ const express= require('express');
 
 //  async function sendMail(){
 // try{
-//  const accessToken =await oAuth2Client.getAccessToken()
+//  const accessToken =await Auth2Client.getAccessToken()
 //  const transport =nodemailer.createTransport({
 //      service:'gmail',
 //      auth: {

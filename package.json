@@ -10,6 +10,7 @@
   "author": "keerthi d",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "googleapi": "^1.0.2",
