@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>home</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    <link rel="stylesheet" href="css/login.css">
+		 <link href="css/styles.css" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <%for(i=0;i<nav.length;i++){%>
+        <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+      <%}%>
+      </ul>
+    </nav>
+  </div>
+</header>
+     <div class="content" >
+  <header> Form</header>
+  <form  class="form-strength" id="form" action="/mailer"  method="post" onsubmit="return validate()">
+     <div class="field">
+           <input type="email" placeholder="Email" id="email" name="email" required >
+
+      </div>
+           <label for="error" id="error"></label>
+      
+      
+          <button class="loginbutton" id="loginBtn" type="submit">Send Email</button> 
+      
+      
+      
+
+  </form>
+  
+ <!--validation-->
+ <script>
+let email = document.getElementById("email");
+let error = document.getElementById("error");
+let regex= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+// let strongpwdregex= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+// // let mediumpwdregex= /^((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))$/;
+// let mediumpwdregex= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+
+function validate(){
+
+
+
+if(email.value==""||email.value.trim()==""){
+error1.innerHTML="Email cannot be empty";
+error1.style.color = "red";
+return false;
+}
+else if(regex.test(email.value)==true){
+error1.innerHTML = "";
+error1.style.color = "green";
+}else if(regex.test(email.value)==false){
+error1.innerHTML = "Email format invalid";
+error1.style.color = "red";
+return false;
+}
+
+}
+
+</script>
+  
+  <br>
+</div>
+
+  
+  <hr>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <ul class="list-inline">
+              <li><i class="icon-facebook icon-2x"></i></li>
+              <li><i class="icon-twitter icon-2x"></i></li>
+              <li><i class="icon-google-plus icon-2x"></i></li>
+              <li><i class="icon-pinterest icon-2x"></i></li>
+            </ul>
+            
+          </div>
+          <div class="col-sm-6">
+              <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+          </div>
+        </div>
+      </div>
+    </footer> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/login2.js"></script> -->
+  </body>
+</html>

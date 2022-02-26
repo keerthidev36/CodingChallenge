@@ -1,0 +1,156 @@
+body {
+    padding-top:50px;
+    color:#646464;
+    background-color:#efefef;
+  }
+/* form style */
+footer {
+
+    margin-top:30%;
+    padding-top:40px;
+    padding-bottom:40px;
+    background-color:#cecece;
+  
+   
+  }
+  
+.content{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 999;
+    width:350px;
+    height: 350px;
+    margin-top:40px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 60px 32px;
+    background: rgba(236, 233, 233, 0.5);
+    box-shadow: -1px 4px 28px opx rgba(0, 0, 0, 0.75);
+    border: 3px solid #0c0666;
+
+
+
+}
+.content header{
+    color: #0c0666;
+    font-size: 30px;
+    font-weight: 600;
+    margin:0 0 35px 0;
+
+    font-family: 'Montserrat',sans-serif;
+}
+.field{
+    position: relative;
+    height:45px;
+    width:100%;
+    display:flex;
+    background:rgba(255,255,255,0.94);
+    border: 1px solid #0c0666;
+
+
+    
+}
+.field span{
+    color: #222;
+    width:40px;
+    line-height: 45px;
+
+}
+.field input{
+    height:100%;
+    width:100%;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:#222;
+    font-size:16px;
+    font-family: 'poppins',sans-serif;
+
+}
+
+.password:valid ~ .show{
+    display:block;
+}
+.space{
+    margin-top:16px;
+
+
+}
+
+.loginbutton {
+    background: #1005ac;
+    border: 1px solid #1005ac;
+    color:white;
+    font-size:18px;
+    letter-spacing: 1px;
+    font-weight:600;
+    font-family: 'Montserrat',sans-serif;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0.9rem 0.11rem;
+    width: 24rem;
+    margin: 1rem auto;
+    border-radius: 0.9rem;
+    text-transform: uppercase;
+    transition: transform 0.5s ease-in-out;
+}
+    
+.login{
+    color: rgb(22, 114, 201);
+    margin:20px 0;
+    font-family: 'Poppins',sans-serif;
+
+}
+.link{
+    display: flex;
+    cursor: pointer;
+    color:white;
+    margin: 0 0 20px 0;
+
+}
+
+label{
+ font-size: 18px;
+ text-align: left;
+}
+
+.errorMsg{
+    position: absolute;
+    top:-100%;
+    left:50%;
+    width:40%;
+    padding: 0.5% 5%;
+    background-color: rgba(0, 0, 0, 0.753);
+    color: white;
+    border-radius: 20px;
+    z-index: 2000;
+    text-align: right !important;
+}
+.errorMsg::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid rgba(0, 0, 0, 0.753);
+    position: absolute;
+    bottom:-54%;
+    left:67%;
+    z-index: 2000;
+}
+.errorMsg.hidden{
+    display: none;
+}
+
+
+
+
+
+/* Form style end */
+#footer{
+     padding: 10px 0; margin-top:40%;
+}
